@@ -24,5 +24,5 @@ qemu-system-riscv64 -machine virt -m 128M -gdb tcp::1234 -kernel build/hello_ris
 
 Connect from another terminal into the GDB server
 ```bash
-riscv64-elf-gdb build/hello_riscv --tui -ex "target remote :1234" -ex "b main"
+riscv64-elf-gdb build/hello_riscv --tui -ex "target remote :1234" -ex "b _start"
 ```
